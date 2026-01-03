@@ -45,7 +45,6 @@ coverage/
 
 # Documentation files (may contain sensitive info)
 *.md
-!README.md
 
 # Seed files with credentials
 backend/scripts/seedData.js

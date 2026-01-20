@@ -13,6 +13,7 @@ const UsageGraph = () => {
 
   useEffect(() => {
     fetchUsageData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [timeRange]);
 
   const fetchUsageData = async () => {

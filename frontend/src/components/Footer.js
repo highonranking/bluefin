@@ -6,7 +6,7 @@ import axios from 'axios';
 const API_URL = process.env.REACT_APP_API_URL || 'https://bluefin-6dzk.onrender.com/api';
 
 const Footer = () => {
-  const { isAuthenticated, isAdmin } = useAuth();
+  const { isAuthenticated } = useAuth();
   const [contactInfo, setContactInfo] = useState(null);
 
   useEffect(() => {
@@ -98,12 +98,12 @@ const Footer = () => {
             © {new Date().getFullYear()} {contactInfo?.companyName || 'BlueFin ISP'}. All rights reserved.
           </p>
           <div className="flex gap-6 mt-4 md:mt-0">
-            <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+            <button type="button" className="text-gray-400 hover:text-white transition-colors text-sm">
               Privacy Policy
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+            </button>
+            <button type="button" className="text-gray-400 hover:text-white transition-colors text-sm">
               Terms of Service
-            </a>
+            </button>
           </div>
         </div>
       </div>

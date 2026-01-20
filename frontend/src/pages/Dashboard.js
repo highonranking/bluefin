@@ -11,7 +11,6 @@ import Toast from '../components/Toast';
 const API_URL = process.env.REACT_APP_API_URL || 'https://bluefin-6dzk.onrender.com/api';
 
 const Dashboard = () => {
-  const { user } = useAuth();
   const [userData, setUserData] = useState(null);
   const [payments, setPayments] = useState([]);
   const [usageStats, setUsageStats] = useState(null);
@@ -20,8 +19,14 @@ const Dashboard = () => {
 
   useEffect(() => {
     fetchDashboardData();
-    checkPlanExpiry();
   }, []);
+
+  useEffect(() => {
+    if (userData) {
+      checkPlanExpiry();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [userData]);
 
   const fetchDashboardData = async () => {
     try {

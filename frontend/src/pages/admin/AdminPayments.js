@@ -13,6 +13,7 @@ const AdminPayments = () => {
 
   useEffect(() => {
     fetchPayments();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filter]);
 
   const fetchPayments = async () => {

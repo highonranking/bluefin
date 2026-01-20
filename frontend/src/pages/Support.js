@@ -31,6 +31,7 @@ const Support = () => {
     if (selectedTicket) {
       fetchTicketDetails(selectedTicket._id);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedTicket?._id]);
 
   useEffect(() => {

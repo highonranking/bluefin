@@ -3,7 +3,6 @@ import axios from 'axios';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Toast from '../components/Toast';
-import LoadingSpinner from '../components/LoadingSpinner';
 
 const API_URL = process.env.REACT_APP_API_URL || 'https://bluefin-6dzk.onrender.com/api';
 
